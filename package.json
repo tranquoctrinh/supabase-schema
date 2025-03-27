@@ -2,7 +2,7 @@
   "name": "supabase-schema",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "NODE_NO_WARNINGS=1 vite",
     "build": "vite build",
     "test": "vue-tsc --noEmit",
     "serve": "vite preview",
