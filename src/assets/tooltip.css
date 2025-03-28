@@ -6,9 +6,11 @@
   /* position: RIGHT */
   /* FX All The Things */
 }
-[tooltip] > * {
+
+[tooltip]>* {
   display: inline-block;
 }
+
 [tooltip]:before,
 [tooltip]:after {
   text-transform: none;
@@ -22,6 +24,7 @@
   display: none;
   opacity: 0;
 }
+
 [tooltip]:before {
   content: '';
   border: 5px solid transparent;
@@ -29,6 +32,7 @@
   z-index: 1001;
   /* absurdity 1 */
 }
+
 [tooltip]:after {
   content: attr(tooltip);
   /* magic! */
@@ -48,20 +52,24 @@
   z-index: 1000;
   /* absurdity 2 */
 }
+
 [tooltip]:hover:before,
 [tooltip]:hover:after {
   display: block;
 }
+
 [tooltip]:not([position]):before,
 [tooltip][position^='top']:before {
   bottom: 100%;
   border-bottom-width: 0;
   border-top-color: #2a2a2a;
 }
+
 [tooltip]:not([position]):after,
 [tooltip][position^='top']::after {
   bottom: calc(100% + 5px);
 }
+
 [tooltip]:not([position])::before,
 [tooltip]:not([position])::after,
 [tooltip][position^='top']::before,
@@ -69,19 +77,23 @@
   left: 50%;
   transform: translate(-50%, -0.5em);
 }
+
 [tooltip][position^='bottom']::before {
   top: 105%;
   border-top-width: 0;
   border-bottom-color: #2a2a2a;
 }
+
 [tooltip][position^='bottom']::after {
   top: calc(105% + 5px);
 }
+
 [tooltip][position^='bottom']::before,
 [tooltip][position^='bottom']::after {
   left: 50%;
   transform: translate(-50%, 0.5em);
 }
+
 [tooltip][position^='left']::before {
   top: 50%;
   border-right-width: 0;
@@ -89,11 +101,13 @@
   left: calc(0em - 5px);
   transform: translate(-0.5em, -50%);
 }
+
 [tooltip][position^='left']::after {
   top: 50%;
   right: calc(100% + 5px);
   transform: translate(-0.5em, -50%);
 }
+
 [tooltip][position^='right']::before {
   top: 50%;
   border-left-width: 0;
@@ -101,11 +115,13 @@
   right: calc(0em - 5px);
   transform: translate(0.5em, -50%);
 }
+
 [tooltip][position^='right']::after {
   top: 50%;
   left: calc(100% + 5px);
   transform: translate(0.5em, -50%);
 }
+
 [tooltip]:not([position]):hover::before,
 [tooltip]:not([position]):hover::after,
 [tooltip][position^='top']:hover::before,
@@ -114,6 +130,7 @@
 [tooltip][position^='bottom']:hover::after {
   animation: tooltips-vert 300ms ease-out forwards;
 }
+
 [tooltip][position^='left']:hover::before,
 [tooltip][position^='left']:hover::after,
 [tooltip][position^='right']:hover::before,
